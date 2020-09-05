@@ -89,10 +89,11 @@ class Game {
 
     }
 
-    if(keyIsDown(UP_ARROW) && player.index !== null){
+    if(keyIsDown(UP_ARROW) && player.index !== null || touches.length>0 && player.index !== null){
       player.distance +=10
       player.update();
       console.log(player.distance)
+      touches=[]
     }
     if(keyIsDown(LEFT_ARROW) && player.index !== null){
       //cars[index-1].x=cars [index-1].x-10
